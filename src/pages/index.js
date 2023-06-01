@@ -1,6 +1,6 @@
 import React from 'react';
-import TwoContainers from './api/components/TwoContainers';
-import Scroll from '/pages/api/components/Scroll';
+import TwoContainers from '../components/TwoContainers';
+import Scroll from '../components/Scroll'
 
 
 
