@@ -1,15 +1,24 @@
 import React from 'react';
-import TwoContainers from './api/components/TwoContainers';
-import Scroll from '/pages/api/components/Scroll';
+
+
+import Container2 from '/Users/st/Desktop/primeiro/components/Container2.js';
+
+import Typography from '@mui/material/Typography';
+
+
+
 
 
 
 const HomePage = () => {
   return (
-    <div className="container">
-      <Scroll/>
     
-    </div>
+      <Container2/>
+      
+    
+      
+    
+
   );
 };
 
