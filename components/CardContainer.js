@@ -8,8 +8,10 @@ const styles = {
     flexWrap: 'wrap',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    height: '100%',
-    overflow: 'auto',
+    height: '648px',
+    maxWidth: '1053px',  
+    overflow: 'hidden',
+    
   },
   card: {
     boxSizing: 'border-box',
@@ -20,7 +22,6 @@ const styles = {
     gap: '20px',
     width: '1053px',
     height: '80px',
-    background: '#FFFFFF',
     border: '1px solid #EAECF0',
     boxShadow: '0px 1px 5px rgba(16, 24, 40, 0.02)',
     borderRadius: '8px',
@@ -45,9 +46,13 @@ const styles = {
     flexGrow: 1,
   },
   cardGridContainer: {
+    maxWidth: 'calc(340.33px * 3 + 48px)',
+    overflowX: 'hidden',
     display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridTemplateColumns: 'repeat(3, calc(328.33px + 10px))',
     gap: '20px',
+    justifyContent: 'flex-start',
+    marginBottom: '10px', 
   },
   button: {
     marginTop: '20px',

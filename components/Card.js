@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@mui/styles';
 import { Checkbox, Button, Box } from '@mui/material';
-import { styled } from '@mui/system';
 
 const useStyles = makeStyles({
   card: {
@@ -56,13 +55,10 @@ const useStyles = makeStyles({
     flexDirection: 'row',
     alignItems: 'center',
     padding: '0px',
-    width: '102px',
-    height: '40px',
-    flex: 'none',
-    order: 1,
-    flexGrow: 0,
     marginLeft: 'auto',
-    background: 'pink',
+    background: 'green',
+    width: '102px', 
+    height: '40px'
   },
   textContainer: {
     display: 'flex',
@@ -80,28 +76,56 @@ const useStyles = makeStyles({
     textTransform: 'capitalize',
     color: '#101828',
   },
-  smallerComponent: {
-    position:'relative',
+  socialComponent: {
+    position: 'relative',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    width: '110px', 
+    width: '110px',
     height: '32px',
     flex: 'none',
     order: 0,
     flexGrow: 0,
-    justifyContent:'space-between',
+    justifyContent: 'space-between',
     border: '1.5px solid lightGrey',
-    background:'pink'
+    backgroundColor: 'red',
+  },
+  socialItem: {
+    width: '25%', 
+    flex:'nome',
+    order:0,
+  },
+  linkedin: {
+    position: 'relative',
+    width: '20px',
+    height: '100%',
+    backgroundColor:'green'
+  },
+  
+  gmail: {
+    position: 'relative',
+    backgroundColor: '#FFFFFF', 
+    width: '23px',
+    height: '23px',
+    marginLeft:'2px',
+    border: '0.5px solid #EAECF0',
+    borderRadius: '50%',
+    transition: 'transform 0.3s',
     
   },
   
-
-  
-},)
-
-  
-
+  asana: {
+    position: 'relative',
+    width: '27.5px',
+    height: '100%', 
+  },
+  plus: {
+    position: 'relative',
+    backgroundColor: 'blue',
+    width: '27.5px',
+    height: '100%',
+  },
+});
 
 const Card = () => {
   const classes = useStyles();
@@ -109,23 +133,76 @@ const Card = () => {
   return (
     <div className={classes.card}>
       <Checkbox className={classes.checkbox} />
-      {/* <div className={classes.blueContainer}>
+      <div className={classes.blueContainer}>
         <div className={classes.whiteContainer}>
           <div className={classes.textContainer}>
             WorkFlow Name If It Has A
             <br />
             Second Line
           </div>
-          
           <div className={classes.smallerComponent}>
-  
-      
-    </div>
+          <Box className={classes.socialComponent}>
+          <Box className={`${classes.socialItem} ${classes.linkedin}`}>
+  <img
+    src="/images/bgLi.png"
+    alt="Background Image"
+    style={{
+      position: 'absolute',
+      top: '6.25%',
+      bottom: '6.25%',
+      background: '#1275B1',
+      borderRadius: '56px',
+      width: '28px',
+      transition: 'transform 0.2s',
+    }}
+    onMouseEnter={(e) => (e.target.style.transform = 'scale(1.3)')}
+    onMouseLeave={(e) => (e.target.style.transform = 'scale(1)')}
+  />
+  <img
+    src="/images/linked_in.png"
+    alt="LinkedIn Image"
+    style={{
+      position: 'absolute',
+      left: '27%',
+      top: '25%',
+      bottom: '31.25%',
+      width: '14px',
+      height: '13px',
+    }}
+  />
+</Box>
+
+      <Box className={`${classes.socialItem} ${classes.gmail}`}>
+      <img
+                  src="/images/gmail.png"
+                  alt="Gmail Image"
+                  style={{
+                    position: 'absolute',
+                    top:'25%',
+                    right:'18%', 
+                    width:'14px'  
+                  }}
+                  />
+      </Box>
+      <Box className={`${classes.socialItem} ${classes.asana}`}>
+
+
+
+
+
+
+
+
+
+      </Box>
+      <Box className={`${classes.socialItem} ${classes.plus}`}></Box>
+    </Box>
+          </div>
         </div>
         <div className={classes.toggleContainer}>
-        
+          {/* Content of the toggleContainer */}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
