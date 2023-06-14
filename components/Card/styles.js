@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { Switch } from "@mui/material";
+import styled from '@emotion/styled'
+import { Switch } from '@mui/material'
 
 export const inlineCardStyle = {
   boxSizing: 'border-box',
@@ -12,20 +12,19 @@ export const inlineCardStyle = {
   border: '1px solid #EAECF0',
   boxShadow: '0px 1px 5px rgba(16, 24, 40, 0.02)',
   borderRadius: '8px',
-
-
-};
+}
 export const gridColumnStyle = {
   boxSizing: 'border-box',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-start',
-  padding: '0px',
   background: '#FFFFFF',
   border: '1px solid #EAECF0',
   borderRadius: '8px',
-};
-
+  gap: '12px',
+  window: '100%',
+  padding: '12px',
+}
 
 export const inlineFrameStyle = {
   display: 'flex',
@@ -35,8 +34,8 @@ export const inlineFrameStyle = {
   gap: '20px',
   width: '100%',
   height: '100%',
-  justifyContent: 'space-between'
-};
+  justifyContent: 'space-between',
+}
 export const inlineTextStyle = {
   display: 'flex',
   flexDirection: 'column',
@@ -51,8 +50,7 @@ export const inlineTextStyle = {
   lineHeight: '17px',
   textTransform: 'capitalize',
   color: '#101828',
-
-};
+}
 export const inlineTextStyleGrid = {
   height: '34px',
   fontFamily: 'Inter',
@@ -63,20 +61,17 @@ export const inlineTextStyleGrid = {
   textTransform: 'capitalize',
   color: '#1D2939',
   marginLeft: '-15px',
-};
+}
 export const iconBoxStyle = {
   display: 'flex',
   flexDirection: 'row',
-  width: '110px',
   height: '32px',
-
-
-};
+  window: '100%',
+}
 export const ImgStyle = {
   display: 'flex',
   alignItems: 'center',
-
-};
+}
 
 export const endFrameStyle = {
   display: 'flex',
@@ -88,61 +83,51 @@ export const endFrameStyle = {
   width: '102px',
   height: '40px',
   marginLeft: 'auto',
-
-};
-
+}
 
 export const boxStyle = {
   display: 'flex',
   flexDirection: 'row',
-  alignItems: 'flex-start',
-  padding: '20px 20px 0',
+  alignItems: 'center',
+  justifyContent: 'space-between',
   gap: '20px',
   isolation: 'isolate',
-  width: '344.33px',
+  width: '100%',
   height: '54px',
   filter: 'drop-shadow(0px 1px 5px rgba(16, 24, 40, 0.02))',
-};
+}
 export const lowerStyle = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-start',
   gap: '20px',
-  width: '342px',
-  height: '72px',
   filter: 'drop-shadow(0px 1px 5px rgba(16, 24, 40, 0.02))',
-};
+  width: '100%',
+}
 export const ImgStyleGrid = {
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'flex-start',
+  justifyContent: 'space-between',
   padding: '0',
-  width: '110px',
-  height: '32px',
-  marginTop: '14px',
-  marginLeft: '22px'
-};
+  width: '100%',
+}
 export const swithGrid = {
   marginLeft: '160px',
-  marginTop: '14px'
+  marginTop: '14px',
 }
 
-
-
-export function gridContainerStyle(gridMode){
-
+export function gridContainerStyle(gridMode) {
   return {
     overflowY: 'scroll',
-    height: "95%",
+    height: '95%',
     display: 'grid',
     gap: '10px',
     width: '100%',
-  
+
     gridTemplateColumns: gridMode ? 'repeat(3, 1fr)' : '1fr', // Single column for inline mode
   }
-
-};
-
+}
 
 export const AntSwitch = styled(Switch)(({ theme }) => ({
   width: 32,
@@ -182,7 +167,9 @@ export const AntSwitch = styled(Switch)(({ theme }) => ({
     borderRadius: 16 / 2,
     opacity: 1,
     backgroundColor:
-      theme.palette?.mode === 'dark' ? 'rgba(255,255,255,.35)' : 'rgba(0,0,0,.25)',
+      theme.palette?.mode === 'dark'
+        ? 'rgba(255,255,255,.35)'
+        : 'rgba(0,0,0,.25)',
     boxSizing: 'border-box',
   },
-}));
+}))
