@@ -1,3 +1,5 @@
+import styled from "@emotion/styled";
+import { Switch } from "@mui/material";
 
 export const inlineCardStyle = {
   boxSizing: 'border-box',
@@ -125,3 +127,62 @@ export const swithGrid = {
   marginTop: '14px'
 }
 
+
+
+export function gridContainerStyle(gridMode){
+
+  return {
+    overflowY: 'scroll',
+    height: "95%",
+    display: 'grid',
+    gap: '10px',
+    width: '100%',
+  
+    gridTemplateColumns: gridMode ? 'repeat(3, 1fr)' : '1fr', // Single column for inline mode
+  }
+
+};
+
+
+export const AntSwitch = styled(Switch)(({ theme }) => ({
+  width: 32,
+  height: 18,
+  padding: 0,
+  display: 'flex',
+  '&:active': {
+    '& .MuiSwitch-thumb': {
+      width: 3,
+    },
+    '& .MuiSwitch-switchBase.Mui-checked': {
+      transform: 'translateX(14px)',
+      position: 'absolute',
+    },
+  },
+  '& .MuiSwitch-switchBase': {
+    padding: 2,
+    '&.Mui-checked': {
+      transform: 'translateX(16px)',
+      color: '#fff',
+      '& + .MuiSwitch-track': {
+        opacity: 1,
+        backgroundColor: theme.palette?.mode === 'dark' ? '#177ddc' : '#1890ff',
+      },
+    },
+  },
+  '& .MuiSwitch-thumb': {
+    boxShadow: '0 2px 4px 0 rgb(0 35 11 / 20%)',
+    width: 12,
+    height: 14,
+    borderRadius: 6,
+    transition: theme.transitions?.create(['width'], {
+      duration: 200,
+    }),
+  },
+  '& .MuiSwitch-track': {
+    borderRadius: 16 / 2,
+    opacity: 1,
+    backgroundColor:
+      theme.palette?.mode === 'dark' ? 'rgba(255,255,255,.35)' : 'rgba(0,0,0,.25)',
+    boxSizing: 'border-box',
+  },
+}));

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export const useGrid = () => {
-    const [gridMode, setGridMode] = useState(false)
+  const [gridMode, setGridMode] = useState(false)
 
-    return {
-        gridMode,
-        setGridMode
-    }
+  return {
+    gridMode,
+    setGridMode,
+  }
 }

@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    gap: 4px;
+    position: absolute;
+    left: -140px;
+    background: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.buttonStyles {
+  display:flex;
+  align-items: center;
+  text-transform: none;
+  font-style: normal;
+  font-size: 13px;
+  color: #667085;
+  border: 0;
+  padding: 12px 8px;
+  width: 100%;
+  gap: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.buttonStyles:hover {
+  background: rgba(0,0,0,0.1);
+}
+.iconStyle {
+  margin-left: auto;
+}
+.buttonStyles span {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.ContainerColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  gap: 4px;
+  position: absolute;
+  left: -140px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 8px;
+  width: 200px;
+}
