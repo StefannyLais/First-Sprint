@@ -1,10 +1,11 @@
-import { Box, Checkbox, Typography, Stack, Button, IconButton } from '@mui/material';
+import { Box, Checkbox, Typography, Stack } from '@mui/material';
 import Switch from '@mui/material/Switch';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { styled } from '@mui/material/styles';
 import React, { useState } from 'react';
 import { useGrid } from "../hooks/gridMode"
 import { ButtonDropDown } from './ButtonDropDown'
+
+import styles from './styles.module.css'
 
 const AntSwitch = styled(Switch)(({ theme }) => ({
   width: 32,
@@ -52,19 +53,6 @@ const Card = ({
   gridMode
 }) => {
 
-  const { setGridMode } = useGrid()
-
-  const label = { inputProps: { 'aria-label': 'Size switch demo' } };
-
-  const [openDropDown, setOpenDropDown] = React.useState(false);
-
-
-  const [showMenu, setShowMenu] = useState(false);
-  const handleClick = () => {
-    setOpenDropDown(!openDropDown);
-  };
-
-
   const renderCards = () => {
     const cards = [];
     const numCards = 50;
@@ -94,11 +82,6 @@ const Card = ({
       borderRadius: '8px',
     };
 
-    const columnStyle = {
-      display: 'grid',
-      gap: '10px',
-      marginBottom: '10px',
-    };
 
     const inlineFrameStyle = {
       display: 'flex',
@@ -164,12 +147,7 @@ const Card = ({
 
     };
 
-    const gridContainerStyle = {
-      width: '100%',
-      overflowY: 'auto',
-      display: 'grid',
-      gap: '10px',
-    };
+  
     const boxStyle = {
       display: 'flex',
       flexDirection: 'row',

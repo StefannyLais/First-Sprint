@@ -20,9 +20,7 @@ const Home = () => {
     <div
       className={styles.container}
     >
-
       <Sidebar />
-
       <div className={styles.container__content}>
         <Navbar />
         <Box
@@ -148,7 +146,7 @@ const Home = () => {
                       gap: '2.59px',
                       width: '69.88px',
                       height: '38px',
-                      border: '1.03897px solid #F2F4F7 ',
+                      border: '1px solid #F2F4F7 ',
                       borderRadius: '5px',
                       background: '#F2F4F7',
 

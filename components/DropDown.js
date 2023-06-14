@@ -3,7 +3,6 @@ import { Box, Button } from '@mui/material';
 import { Folder } from './icons';
 
 const DropDown = () => {
-    const [open, setOpen] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false);
 
     const handleMouseEnter = () => {
@@ -35,7 +34,8 @@ const DropDown = () => {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        gap: '8px', padding: '8px 12px',
+        gap: '8px', 
+        padding: '8px 12px',
         width: '223px',
         height: '40px',
         borderRadius: '6px',
