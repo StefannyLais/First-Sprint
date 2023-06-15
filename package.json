@@ -24,6 +24,7 @@
     "react-window": "^1.8.9"
   },
   "devDependencies": {
+    "@rocketseat/eslint-config": "^1.2.0",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4"
   }
